@@ -13,9 +13,9 @@
 def partition(arr, left, right):
     pivot = arr[(left + right) // 2] # Запоминаем опорный эл-т
     while left <= right: # Сортируем подмассивы, пока указатели left и right не пересекутся друг с другом
-        while arr[left] < pivot: # Двигаем указатель left вправо, пока не найдём эл-т больше опорного
+        while arr[left] < pivot: # Двигаем указатель left вправо, пока не найдём эл-т больше или равный опорному
             left += 1
-        while arr[right] > pivot: # Двигаем right, пока не найдём эл-т меньше опорного
+        while arr[right] > pivot: # Двигаем right, пока не найдём эл-т меньше или равный опорному
             right -= 1
 
         if left <= right:
@@ -39,6 +39,6 @@ def sort(arr):
 
 
 
-arr = [4, 7, 2, 5, 9, 4, 3]
+arr = [9, 2, 5, 1, 8]
 sort(arr)
 print(arr)
